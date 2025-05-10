@@ -1,3 +1,4 @@
+HEAD
 <!-- markdownlint-disable-next-line -->
 # <img src="https://opentelemetry.io/img/logos/opentelemetry-logo-nav.png" alt="OTel logo" width="45"> OpenTelemetry Demo
 
@@ -141,3 +142,7 @@ Emeritus:
 [Teletrace]: https://github.com/teletrace/opentelemetry-demo
 [Tracetest]: https://github.com/kubeshop/opentelemetry-demo
 [Uptrace]: https://github.com/uptrace/uptrace/tree/master/example/opentelemetry-demo
+=======
+# otel-eks-project
+OpenTelemetry Demo EKS Deployment with CI/CD
+ ac677756e333774136619030a7047ffb2e1d34e0
