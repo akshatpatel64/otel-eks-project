@@ -37,12 +37,15 @@ jobs:
         echo "${{ secrets.KUBE_CONFIG }}" | base64 --decode > ~/.kube/config
 
     - name: Deploy to EKS Cluster
+      id: deploy_step
       run: |
+        set -e
+        echo "🚀 Deploying to EKS..."
         kubectl set image deployment/frontend frontend=akshatpatel64/otel-frontend:crash -n otel-demo
         kubectl rollout status deployment/frontend -n otel-demo
 
     - name: Rollback on Failure
-      if: failure()
+      if: ${{ failure() }}
       run: |
-        echo "Deployment failed! Rolling back..."
+        echo "❌ Deployment failed! Rolling back..."
         kubectl rollout undo deployment/frontend -n otel-demo
