@@ -41,7 +41,7 @@ jobs:
       run: |
         set -e
         echo "🚀 Deploying to EKS..."
-        kubectl set image deployment/frontend frontend=akshatpatel64/otel-frontend:crash -n otel-demo
+        kubectl set image deployment/frontend frontend=akshatpatel64/otel-frontend:latest -n otel-demo
         kubectl rollout status deployment/frontend -n otel-demo
 
     - name: Rollback on Failure
